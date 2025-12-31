@@ -1,8 +1,7 @@
 /**
  * 
   Intution is to use binary search as the requirement is to write an algorithm which completes in O(log n)
-  I  usually use the condition left<=right in the while loop, but this scenario i removed the equal to condition as return left covers it.
-  I am moving my pointers towards the peak always, if the peak resides on the left iam moving my right pointer towards left 
+  I am moving my pointers towards the peak always, if the peak resides on the left iam moving my right pointer towards mid 
   otherwise left pointer to the right.
   Time complexity : O(log n)
   Space Complexity: O(1) as i am not using any extra space other than left and right pointers.
@@ -14,7 +13,7 @@ var findPeakElement = function (nums) {
         if (nums[mid] < nums[mid + 1]) {
             left = mid + 1;
         } else {
-            right = mid - 1;
+            right = mid;
         }
     }
     return left;
