@@ -4,7 +4,8 @@
   I  usually use the condition left<=right in the while loop, but this scenario i removed the equal to condition as return left covers it.
   I am moving my pointers towards the peak always, if the peak resides on the left iam moving my right pointer towards left 
   otherwise left pointer to the right.
-  
+  Time complexity : O(log n)
+  Space Complexity: O(1) as i am not using any extra space other than left and right pointers.
  */
 var findPeakElement = function (nums) {
     let left = 0, right = nums.length - 1;
